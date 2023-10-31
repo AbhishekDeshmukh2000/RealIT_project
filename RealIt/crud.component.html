@@ -1,0 +1,19 @@
+
+<!-- Display records in a table and provide buttons to add, edit, and delete records -->
+<table>
+    <tr>
+      <th>ID</th>
+      <th>JSON Model</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let record of records">
+      <td>{{ record.id }}</td>
+      <td>{{ record.json_model }}</td>
+      <td>
+        <button (click)="editRecord(record.id)">Edit</button>
+        <button (click)="deleteRecord(record.id)">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <button (click)="addRecord()">Add Record</button>
+  
